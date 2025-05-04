@@ -1,5 +1,5 @@
 library(readr)
-student_depression_dataset <- read_csv("Documents/JMU-Programming/Spring-2025/math268/math268-final-proj/student_depression_dataset.csv")
+student_depression_dataset <- read_csv("/student_depression_dataset.csv")
 View(student_depression_dataset)
 
 data = student_depression_dataset
