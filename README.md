@@ -1,4 +1,4 @@
-# Project Title
+# StudentDepressionAnalysis
 
 # Authors
 Gavin Barro, Nathan Carter, Jack Bresnahan
