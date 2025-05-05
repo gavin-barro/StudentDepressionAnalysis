@@ -8,9 +8,9 @@ For our final project, we decided to ...
 
 # Project Guidelines
 
-1- Data: Find the data set that has at three variables (quantitative  and qualitative)- describe your data (in the intro) 
+1. Data: Find the data set that has at three variables (quantitative  and qualitative)- describe your data (in the intro) 
 
-2- Goal (s) Have clear goals/hypothesis or hypotheses-state them in the intro section'
+2. Goal (s) Have clear goals/hypothesis or hypotheses-state them in the intro section'
 
 3. Model assumptions (State them in the intro section)
    
