@@ -1,5 +1,5 @@
 library(readr)
-student_depression_dataset <- read_csv("/student_depression_dataset.csv")
+student_depression_dataset <- read_csv("Documents/JMU-Programming/Spring-2025/math268/math268-final-proj/student_depression_dataset.csv")
 View(student_depression_dataset)
 
 data = student_depression_dataset
@@ -48,28 +48,34 @@ table(data$Depression)
 prop.table(table(data$Depression))
 
 # Histograms
-hist(data$Financial.Stress, main = "Financial Stress Distribution", xlab = "Financial Stress")
-hist(data$Work.Study.Hours, main = "Work Study Hours Distribution", xlab = "Work Study Hours")
+hist(data$Financial.Stress, main = "Financial Stress Distribution", 
+     xlab = "Financial Stress")
+hist(data$Work.Study.Hours, main = "Work Study Hours Distribution",
+     xlab = "Work Study Hours")
 
 # Bar plot
 barplot(table(data$Gender), main = "Gender Distribution")
 barplot(table(data$Depression), main = "Depression Distribution")
 
-model_fs <- glm(Depression ~ Financial.Stress, data = data, family = "binomial")
+model_fs <- glm(Depression ~ Financial.Stress, data = data, 
+                family = "binomial")
 summary(model_fs)
 
-model_wsh <- glm(Depression ~ Work.Study.Hours, data = data, family = "binomial")
+model_wsh <- glm(Depression ~ Work.Study.Hours, data = data, 
+                 family = "binomial")
 summary(model_wsh)
 
 model_gender <- glm(Depression ~ Gender, data = data, family = "binomial")
 summary(model_gender)
 
-model <- glm(Depression ~ Gender + Financial.Stress + Work.Study.Hours, data = data, family = "binomial")
+model <- glm(Depression ~ Gender + Financial.Stress + Work.Study.Hours, 
+             data = data, family = "binomial")
 summary(model)
 
 # Example for model_fs (Financial Stress)
 ll_model <- logLik(model_fs)
-ll_null <- logLik(glm(Depression ~ 1, data = data, family = "binomial"))  # null model
+ll_null <- logLik(glm(Depression ~ 1, data = data, family = "binomial"))  
+# null model
 
 pseudo_r2 <- 1 - as.numeric(ll_model / ll_null)
 pseudo_r2
